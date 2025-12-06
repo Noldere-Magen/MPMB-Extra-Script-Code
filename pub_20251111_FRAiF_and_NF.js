@@ -116,6 +116,56 @@ MagicItemsList["mythallar cloak"] = {
 }
 
 //Statblocks
+CreatureList["caldron magen"] = {
+	name : "Caldron Magen",
+	source : [["NF", ""]],
+	size : 3, //Medium
+	type : "Construct",
+	alignment : "Unaligned",
+	ac : 20,
+	hp : 67,
+	hd : [9, 8],
+	speed : "30 ft",
+	scores : [18, 13, 16, 10, 10, 10],
+	damage_immunities : "Acid; Poison",
+	condition_immunities : "Blinded; Charmed; Deafened; Exhaustion; Frightened; Paralyzed; Petrified; Poisoned",
+	languages : "Understands Common and 2 other languages but can't speak",
+	skills : {
+		"perception" : 4
+	},
+	passivePerception : 14,
+	senses : "",
+	challengeRating : 4,
+	proficiencyBonus : 2,
+	attacksAction : 2,
+	traits : [{
+		name : "Multiattack",
+		description : "The magen makes two attacks, using Extended Fist or Acid Spittle in any combination.",
+		joinString : "\n   ",
+	}, {
+		name : "Disintegration",
+		description : "If the magen dies, it disintegrates into dust, leaving behind anything it was wearing or carrying.",
+		joinString : "\n   ",
+	}, {
+		name : "Magic Resistance",
+		description : "The magen has Advantage on saving throws against spells and other magical effects.",
+		joinString : "\n   ",
+	}],
+	attacks : [{
+		name : "Extended Fist",
+		ability : 1,
+		damage : [1, 8, "bludgeoning"],
+		range : "Melee (5 ft)",
+		description : "Plus 5 (1d10) Acid dmg. If Medium or smaller creature, target has the Grappled condition (escape DC 14) from one of two fists",
+		}, {
+		name : "Acid Spittle",
+		ability : 1,
+		damage : [2, 8, "acid"],
+		range : "60 ft",
+		description : "",
+	}],
+};
+
 CreatureList["eldritch eddy"] = {
 	name : "Eldritch Eddy",
 	source : [["NF", ""]],
@@ -218,6 +268,55 @@ CreatureList["terran magen"] = {
 		range : "60 ft",
 		description : "",
 	}],
+};
+
+CreatureList["virvos magen"] = {
+	name : "Virvos Magen",
+	source : [["NF", ""]],
+	size : 3, //Medium
+	type : "Construct",
+	alignment : "Unaligned",
+	ac : 21,
+	hp : 110,
+	hd : [17, 8],
+	speed : "30 ft, Fly 20 ft (hover)",
+	scores : [12, 10, 14, 10, 10, 16],
+	damage_immunities : "Poison; Psychic",
+	condition_immunities : "Blinded; Charmed; Deafened; Exhaustion; Frightened; Paralyzed; Petrified; Poisoned",
+	languages : "Understands Common and 2 other languages but can't speak",
+	skills : {
+		"perception" : 6
+	},
+	passivePerception : 16,
+	senses : "",
+	challengeRating : 6,
+	proficiencyBonus : 3,
+	attacksAction : 2,
+	traits : [{
+		name : "Multiattack",
+		description : "The magen makes two Psychic Blast attacks.",
+		joinString : "\n   ",
+	}, {
+		name : "Disintegration",
+		description : "If the magen dies, it disintegrates into dust, leaving behind anything it was wearing or carrying.",
+		joinString : "\n   ",
+	}, {
+		name : "Magic Resistance",
+		description : "The magen has Advantage on saving throws against spells and other magical effects.",
+		joinString : "\n   ",
+	}],
+	features : [{
+		name : "Spellcasting",
+		description : "The magen casts one of the following spells, requiring no Material components and Charisma as the spellcasting ability (spell save DC 14): Dancing Lights, Minor Illusion (At Will); Hypnotic Pattern, Major Image (1/Day Each)"
+		}],
+	attacks : [{
+		name : "Psychic Blast",
+		ability : 6,
+		abilitytodamage : false,
+		damage : [6, 6, "psychic"],
+		range : "Melee (5 ft), or Range 60 ft",
+		description : "",
+		}],
 };
 
 //Forgotten Realms: Adventures in Faerun
@@ -405,4 +504,5 @@ MagicItemsList["windskiff"] = {
 	usages : 3,
 	recovery : "dawn",
 };
+
 */
